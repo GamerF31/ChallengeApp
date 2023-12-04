@@ -17,7 +17,7 @@
         public int Result { get { return this.score.Sum(); } }
         public void DelScore(int number) 
         {
-            this.score.Remove(number);
+            this.score.Add(-number);
         }
         public void AddScore(int number)
         {
