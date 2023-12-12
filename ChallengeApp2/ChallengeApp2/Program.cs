@@ -54,11 +54,22 @@ Console.WriteLine("Ziomek z największą ilością punktów to " + usemaxR.Name 
 */
 using ChallengeApp2;
 
-var employe = new Employee1("Przemek", "Hubacz");
-employe.AddGrade(2);
-employe.AddGrade(3);
+var employe = new Employee("Przemek", "Hubacz");
+employe.AddGrade("Pesemek");
+employe.AddGrade(4000);
 employe.AddGrade(6);
-var statistics = employe.GetStatistics;
-Console.WriteLine($"Average: {statistics}");    
+employe.AddGrade(2.2d);
+employe.AddGrade(9.3f);
+var statistics = employe.GetStatistics();
+Console.WriteLine($"Average: {statistics.Average}");
+Console.WriteLine($"Average: {statistics.Min}");
+Console.WriteLine($"Average: {statistics.Max}");
+
+SetSth(out statistics);
+
+void SetSth(out Statistics statistics)
+{
+    statistics = new Statistics();
+}
 
 
