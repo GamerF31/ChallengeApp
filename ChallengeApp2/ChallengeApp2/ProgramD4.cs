@@ -1,5 +1,6 @@
 ﻿// liczby całkowite
 /*
+ using System.ComponentModel.Design; 
 int myAge = 120;
 int newAge = myAge + 5;
 //Console.WriteLine(newAge);
