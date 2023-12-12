@@ -13,7 +13,8 @@ Console.WriteLine(result);
 var name = User.GameName;
 var pi = Math.PI;
 Console.WriteLine(name);*/
-using ChallengeApp3;
+/*
+
 Employee employer1 = new Employee(21, "Przemek","Hubacz");
 Employee employer2 = new Employee(13, "Paweł", "Hubacow");
 Employee employer3 = new Employee(29, "Konrad", "Kapusta");
@@ -50,4 +51,14 @@ foreach (var Employee in employers)
         usemaxR = Employee; }
 }
 Console.WriteLine("Ziomek z największą ilością punktów to " + usemaxR.Name +" " + usemaxR.Surname + " ma " + usemaxR.Age+" lat");
+*/
+using ChallengeApp2;
+
+var employe = new Employee1("Przemek", "Hubacz");
+employe.AddGrade(2);
+employe.AddGrade(3);
+employe.AddGrade(6);
+var statistics = employe.GetStatistics;
+Console.WriteLine($"Average: {statistics}");    
+
 
