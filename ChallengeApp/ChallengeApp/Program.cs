@@ -75,24 +75,25 @@ var name = "Przemek";
 var płeć = "mężczyzna";
 int age = 210;
 Console.WriteLine(name + ", lat" + age);
-if(płeć == "mężczyzna")
+if (płeć == "mężczyzna")
 {
-    if(age > 30)
+    if (age > 30)
     {
         Console.WriteLine("Mężczyzna powyzej 30 lat");
     }
-    else 
+    else
     {
-        if(age<18){
+        if (age < 18)
+        {
             Console.WriteLine("Niepełnoletni mężczyzna");
 
         }
         Console.WriteLine("Mężczyzna poniżej 30 lat");
-        
+
     }
 
 }
-else if(płeć == "kobieta")
+else if (płeć == "kobieta")
 {
     Console.WriteLine("Jesteś kobietą");
 }
