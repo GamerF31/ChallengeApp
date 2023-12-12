@@ -57,9 +57,9 @@ namespace ChallengeApp2.Test
             Assert.AreNotEqual(Employee, Employee2);
 
         }
-        private Employee GetEmployee(int Age, string Name, string Surname)
+        private Employee2 GetEmployee(int Age, string Name, string Surname)
         {
-            return new Employee(Age, Name, Surname);
+            return new Employee2(Age, Name, Surname);
         }
     }
 }

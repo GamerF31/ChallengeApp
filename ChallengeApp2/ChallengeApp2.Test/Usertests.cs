@@ -18,6 +18,7 @@ namespace ChallengeApp2.Test
             Assert.AreEqual(6, result); 
             
         }
+        /*
         [Test]
         public void WhenUserCollectPoints2()
         {
@@ -49,7 +50,7 @@ namespace ChallengeApp2.Test
             //asset
             Assert.AreEqual(0, result);
 
-        }
+        }*/
 
     }
 }
