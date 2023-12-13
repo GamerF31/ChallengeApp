@@ -54,7 +54,7 @@ Console.WriteLine("Ziomek z największą ilością punktów to " + usemaxR.Name 
 */
 using ChallengeApp2;
 
-var employe = new Employee1("Przemek", "Hubacz");
+var employe = new Employee("Przemek", "Hubacz");
 employe.AddGrade("Pesemek");
 employe.AddGrade(4000);
 employe.AddGrade(6);
