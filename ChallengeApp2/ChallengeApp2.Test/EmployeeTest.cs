@@ -6,7 +6,7 @@
         public void ReturnMaxStat()
         {
             //arrange
-            var employee = new Employee("Przemek", "Hubacz");
+            var employee = new Employee1("Przemek", "Hubacz");
             employee.AddGrade(2);
             employee.AddGrade(10);
             employee.AddGrade(1);
@@ -21,7 +21,7 @@
         public void ReturnMinStat() 
         {
             //arrange
-            var employee = new Employee("Przemek", "Hubacz");
+            var employee = new Employee1("Przemek", "Hubacz");
             employee.AddGrade(2);
             employee.AddGrade(10);
             employee.AddGrade(1);
@@ -36,7 +36,7 @@
         public void ReturnifAverage()
         {
             //arrange
-            var employee = new Employee("Przemek", "Hubacz");
+            var employee = new Employee1("Przemek", "Hubacz");
             employee.AddGrade(2);
             employee.AddGrade(10);
             employee.AddGrade(3);
