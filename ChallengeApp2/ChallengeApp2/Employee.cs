@@ -45,6 +45,8 @@
             var gradeslong = (float)grade;
             AddGrade(gradeslong);
         }
+
+
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
