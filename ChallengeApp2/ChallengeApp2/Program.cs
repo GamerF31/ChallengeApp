@@ -67,6 +67,7 @@ Console.WriteLine($"Average: {statistics.Max}");
 
 SetSth(out statistics);
 
+
 void SetSth(out Statistics statistics)
 {
     statistics = new Statistics();

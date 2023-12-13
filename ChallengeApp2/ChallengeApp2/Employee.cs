@@ -46,7 +46,6 @@
             AddGrade(gradeslong);
         }
 
-
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
