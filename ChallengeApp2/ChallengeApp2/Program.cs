@@ -60,10 +60,22 @@ employe.AddGrade(4000);
 employe.AddGrade(6);
 employe.AddGrade(2.2d);
 employe.AddGrade(9.3f);
-var statistics = employe.GetStatistics();
+var statistics = employe.GetStatisticsWithForEach();
+var statistics2 = employe.GetStatisticsWithFor();
+var statistics3 = employe.GetStatisticsWithDoWhile();
+var statistics4 = employe.GetStatisticsWithWhile();
 Console.WriteLine($"Average: {statistics.Average}");
-Console.WriteLine($"Average: {statistics.Min}");
-Console.WriteLine($"Average: {statistics.Max}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}");
+Console.WriteLine($"Average: {statistics2.Average}");
+Console.WriteLine($"Min: {statistics2.Min}");
+Console.WriteLine($"Max: {statistics2.Max}");
+Console.WriteLine($"Average: {statistics3.Average}");
+Console.WriteLine($"Min: {statistics3.Min}");
+Console.WriteLine($"Max: {statistics3.Max}");
+Console.WriteLine($"Average: {statistics4.Average}");
+Console.WriteLine($"Min: {statistics4.Min}");
+Console.WriteLine($"Max: {statistics4.Max}");
 
 SetSth(out statistics);
 
