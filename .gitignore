@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/ChallengeApp2/ChallengeApp2/Employee2.cs
+/ChallengeApp2/ChallengeApp2/Employee1.cs
