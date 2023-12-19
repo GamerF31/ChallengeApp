@@ -14,7 +14,24 @@ Console.WriteLine(statistics.AverageLetter);
 Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
 Console.WriteLine("========================================");
 Console.WriteLine();
-var employee = new Employee();
+var employee = new Employee("Przemek","Hubacz");
+
+/*
+try
+{
+    Employee emp = null;
+    var name = emp.Surname;
+
+}
+catch(Exception exception)
+{
+    Console.WriteLine(exception.Message);
+}
+finally
+{
+    Console.WriteLine("Finally here");
+}
+*/
 while(true)
 {
     Console.WriteLine("Podaj kolejną ocene pracownika: ");
@@ -23,11 +40,19 @@ while(true)
     {
         break;
     }
-    employee.AddGrade(input);
+    try
+    {
+        employee.AddGrade(input);
+    }
+    catch(Exception e)
+    {
+        Console.WriteLine($"Exception catched: {e.Message}");
+    }
 }
 
 var statistics = employee.GetStatistics();
 Console.WriteLine($"AVG: {statistics.Average}");
 Console.WriteLine($"Max: {statistics.Max}");
 Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Ocena: {statistics.AverageLetter}");
 

@@ -6,24 +6,28 @@ namespace ChallengeApp2
 
     {
         private List<float> grades = new List<float>();
-        public Employee()
+        public Employee(string name, string surname)
         {
+            this.Name = name;   
+            this.Surname = surname; 
             
         }
         public string Name { get; private set; }
 
         public string Surname { get; private set; }
+       
         public void AddGrade(float grade)
-        {   
+        {    
 
-            if (grade >= 0 && grade <= 100) 
+            if(grade>=0 && grade <= 100)
             {
                 this.grades.Add(grade);
+                
             }
-            else 
+            else
             {
-                Console.WriteLine("invalid grade value");
-            }    
+                throw new Exception("invalid number");
+            }
         }
         public void AddGrade(string grade)
         {
@@ -31,20 +35,20 @@ namespace ChallengeApp2
             {
                 this.grades.Add(result);
             }
-            else 
-            { 
-                Console.WriteLine("String in not float"); 
+            else
+            {
+                throw new Exception("String in not float");
             }
         }
         public void AddGrade(double grade) 
         {
-            var gradesdouble = (float)grade;
-            AddGrade(gradesdouble);
+            float gradesdouble = (float)grade;
+            this.AddGrade(gradesdouble);
         }
         public void AddGrade(long grade)
         {
-            var gradeslong = (float)grade;
-            AddGrade(gradeslong);
+            float gradeslong = (float)grade;
+            this.AddGrade(gradeslong);
         }
         public void AddGrade(char grade)
         {
@@ -55,20 +59,23 @@ namespace ChallengeApp2
                     this.grades.Add(100);
                     break;
                 case 'B':
+                case 'b':
                     this.grades.Add(80);
                     break;
                 case 'C':
+                case 'c':
                     this.grades.Add(60);
                     break;
                 case 'D':
+                case 'd':
                     this.grades.Add(40);
                     break;
                 case 'E':
+                case 'e':
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.WriteLine("Wrong letter");
-                    break;
+                    throw new Exception("Wrong Letter");
             }
         }
 
@@ -107,6 +114,7 @@ namespace ChallengeApp2
                     statistics.AverageLetter = 'E';
                     break;
             }
+            
             return statistics;
         }
         
