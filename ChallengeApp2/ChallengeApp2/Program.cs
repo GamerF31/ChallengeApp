@@ -1,4 +1,5 @@
 ﻿using ChallengeApp2;
+using System.Globalization;
 
 /*var employe = new Employee("Przemek", "Hubacz");
 employe.AddGrade("Pesemek");
@@ -10,12 +11,6 @@ employe.AddGrade('a');
 var statistics = employe.GetStatistics();
 Console.WriteLine(statistics.AverageLetter);
 */
-
-Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
-Console.WriteLine("========================================");
-Console.WriteLine();
-var employee = new Employee("Przemek","Hubacz");
-
 /*
 try
 {
@@ -32,6 +27,12 @@ finally
     Console.WriteLine("Finally here");
 }
 */
+
+Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
+Console.WriteLine("========================================");
+Console.WriteLine();
+var employee = new Employee("Przemek","Hubacz");
+
 while(true)
 {
     Console.WriteLine("Podaj kolejną ocene pracownika: ");
