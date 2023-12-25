@@ -6,8 +6,8 @@ namespace ChallengeApp2
 
     {
         private List<float> grades = new List<float>();
-        public Employee(string Name, string Surname, int Age, string Sex)
-            : base(Name,Surname,Age,Sex)
+        public Employee(string name, string surname, int age, string sex)
+            : base(name,surname,age,sex)
         {
         }
 

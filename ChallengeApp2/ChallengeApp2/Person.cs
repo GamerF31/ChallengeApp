@@ -2,10 +2,10 @@
 {   
     public abstract class Person
     {
-        public Person(string Name, string Surname, int Age, string Sex)
+        public Person(string name, string surname, int age, string sex)
         {
 
-            this.Name = Name;
+            this.Name = name;
         }
         public string Name { get; private set; }
         public string Surname { get; private set; }
