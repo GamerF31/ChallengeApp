@@ -4,7 +4,7 @@
     {
         public string Name => "Przemek";
 
-        public string Surname => "Hubacz";
+        public string Surname => throw new NotImplementedException();
 
         public void AddGrade(float grade)
         {
