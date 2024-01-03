@@ -18,17 +18,50 @@
 
         public override void AddGrade(long grade)
         {
-            throw new NotImplementedException();
+            float gradeslong = (float)grade;
+            this.AddGrade(gradeslong);
         }
 
         public override void AddGrade(char grade)
         {
-            throw new NotImplementedException();
+            string result = grade.ToString();
+            this.AddGrade(result);
         }
 
         public override void AddGrade(string grade)
         {
-            throw new NotImplementedException();
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                switch (grade)
+                {
+                    case "A":
+                    case "a":
+                        this.AddGrade(100);
+                        break;
+                    case "B":
+                    case "b":
+                        this.AddGrade(80);
+                        break;
+                    case "C":
+                    case "c":
+                        this.AddGrade(60);
+                        break;
+                    case "D":
+                    case "d":
+                        this.AddGrade(40);
+                        break;
+                    case "E":
+                    case "e":
+                        this.AddGrade(20);
+                        break;
+                    default:
+                        throw new Exception("Wrong Letter");
+                }
+            }
         }
 
         public override Statistics GetStatistics()
