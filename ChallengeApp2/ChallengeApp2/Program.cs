@@ -31,8 +31,9 @@ finally
 Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
 Console.WriteLine("========================================");
 Console.WriteLine();
-var employee = new Employee("Przemek","Hubacz");
-
+var employee = new EmployeeInFile("Przemek","Hubacz");
+employee.AddGrade(0.5f);
+/*
 while(true)
 {
     Console.WriteLine("Podaj kolejną ocene pracownika: ");
@@ -50,7 +51,7 @@ while(true)
         Console.WriteLine($"Exception catched: {e.Message}");
     }
 }
-
+*/
 var statistics = employee.GetStatistics();
 Console.WriteLine($"AVG: {statistics.Average}");
 Console.WriteLine($"Max: {statistics.Max}");
