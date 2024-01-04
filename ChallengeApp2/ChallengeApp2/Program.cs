@@ -31,8 +31,19 @@ finally
 Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
 Console.WriteLine("========================================");
 Console.WriteLine();
-var employee = new EmployeeInFile("Przemek","Hubacz");
-employee.AddGrade(0.5f);
+var employee = new EmployeeInMemory("Przemek", "Hubacz");
+employee.GradeAdded += Employee_GradeAdded;
+
+void Employee_GradeAdded(object sender, EventArgs args)
+{
+    Console.WriteLine("Dodano nową ocenę");
+}
+
+employee.AddGrade(0.6f);
+
+employee.AddGrade(0.4f);
+
+employee.AddGrade(3);
 /*
 while(true)
 {

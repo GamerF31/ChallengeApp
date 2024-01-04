@@ -3,6 +3,7 @@
     public class EmployeeInFile : EmployeeBase
     {
         private const string fileName = "grades.txt";
+        public override event GradeAddedDelegate GradeAdded;
         public EmployeeInFile(string name, string surname) 
             : base(name, surname)
         {
@@ -10,10 +11,22 @@
 
         public override void AddGrade(float grade)
         {
-            using (var writer = File.AppendText(fileName)) 
+            if (grade >= 0 && grade <= 100)
             {
-                writer.WriteLine(grade);
+                using (var writer = File.AppendText(fileName))
+                {
+                    writer.WriteLine(grade);
+                }
+                if (GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                } 
             }
+            else
+            {
+                throw new Exception("Invalid value");
+            }
+            
         }
 
         public override void AddGrade(long grade)
