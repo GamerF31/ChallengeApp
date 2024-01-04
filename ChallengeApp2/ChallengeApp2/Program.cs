@@ -1,5 +1,49 @@
 ﻿using ChallengeApp2;
-using System.Globalization;
+
+
+
+Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
+Console.WriteLine("========================================");
+Console.WriteLine();
+var employee = new EmployeeInFile("Przemek", "Hubacz");
+employee.GradeAdded += Employee_GradeAdded;
+
+void Employee_GradeAdded(object sender, EventArgs args)
+{
+    Console.WriteLine("Dodano nową ocenę");
+}
+
+employee.AddGrade(0.6f);
+
+employee.AddGrade(0.4f);
+
+employee.AddGrade(3);
+while(true)
+{
+    Console.WriteLine("Podaj kolejną ocene pracownika: ");
+    var input = Console.ReadLine();
+    if(input == "q")
+    {
+        break;
+    }
+    try
+    {
+        employee.AddGrade(input);
+    }
+    catch(Exception e)
+    {
+        Console.WriteLine($"Exception catched: {e.Message}");
+    }
+}
+
+var statistics = employee.GetStatistics();
+Console.WriteLine($"AVG: {statistics.Average}");
+Console.WriteLine($"Max: {statistics.Max}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Ocena: {statistics.AverageLetter}");
+
+
+
 
 /*var employe = new Employee("Przemek", "Hubacz");
 employe.AddGrade("Pesemek");
@@ -27,45 +71,3 @@ finally
     Console.WriteLine("Finally here");
 }
 */
-
-Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
-Console.WriteLine("========================================");
-Console.WriteLine();
-var employee = new EmployeeInMemory("Przemek", "Hubacz");
-employee.GradeAdded += Employee_GradeAdded;
-
-void Employee_GradeAdded(object sender, EventArgs args)
-{
-    Console.WriteLine("Dodano nową ocenę");
-}
-
-employee.AddGrade(0.6f);
-
-employee.AddGrade(0.4f);
-
-employee.AddGrade(3);
-/*
-while(true)
-{
-    Console.WriteLine("Podaj kolejną ocene pracownika: ");
-    var input = Console.ReadLine();
-    if(input == "q")
-    {
-        break;
-    }
-    try
-    {
-        employee.AddGrade(input);
-    }
-    catch(Exception e)
-    {
-        Console.WriteLine($"Exception catched: {e.Message}");
-    }
-}
-*/
-var statistics = employee.GetStatistics();
-Console.WriteLine($"AVG: {statistics.Average}");
-Console.WriteLine($"Max: {statistics.Max}");
-Console.WriteLine($"Min: {statistics.Min}");
-Console.WriteLine($"Ocena: {statistics.AverageLetter}");
-
